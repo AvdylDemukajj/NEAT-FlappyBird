@@ -121,6 +121,16 @@ class Pipe:
     
 
 
+class Base:
+    VEL = 5
+    WIDTH = BASED_IMG.get_width()
+    IMG = BASED_IMG
+
+    def __init__(self, y):
+        self.y = y
+        self.x1 = 0
+        self.x2 = self.WIDTH
+
 def draw_window(win, bird):
     win.blit(BG_IMG[0], (0, 0))
     bird.draw(win)
