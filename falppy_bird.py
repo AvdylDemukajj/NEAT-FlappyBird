@@ -72,3 +72,5 @@ class Bird:
         new_rect = rotated_image.get_rect(center=self.img.get_rect(topLeft = (self.x, self.y)).center)
         win.blit(rotated_image, new_rect.topleft)
 
+    def get_mask(self):
+        return pygame.mask.from_surface(self.img)
